@@ -1,0 +1,41 @@
+:root {
+  --main-color: #1A1A1A;
+  --grey: #636363;
+  --grey-light: #EDEDED;
+  --slider-active: #D1AD78;
+  --turquoise-dark: #003033;
+  --cta-btn: #FF176B;
+  --cta-btn-hover: #990b3f;
+
+}
+
+
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1440px,
+  xxl: 1920px
+);
+
+@mixin respond-min($bp)  { 
+  $size: map-get($breakpoints, $bp);
+  @media (min-width: $size) { @content; } 
+}
+
+@mixin respond-max($bp) { 
+  $size: map-get($breakpoints, $bp);
+  @media (max-width: $size) { @content; } 
+}
+
+.hidden { display: none !important; }
+
+@each $name, $size in $breakpoints {
+  .hide-#{$name} {
+    @include respond-min($name) { display: none !important; }
+  }
+  .hide-#{$name}-down {
+    @include respond-max($name) { display: none !important; }
+  }
+}

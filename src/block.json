@@ -1,0 +1,57 @@
+{
+  "apiVersion": 3,
+  "name": "atera/compact-calculator",
+  "title": "Atera Compact Calculator",
+  "category": "widgets",
+  "icon": "calculator",
+  "description": "Estimate your annual cost savings with Atera.",
+  "keywords": ["atera", "calculator", "savings"],
+  "version": "1.0.0",
+  "textdomain": "atera",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Calculate how much you save with Atera"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Start free trial"
+    },
+    "saveLabel": {
+      "type": "string",
+      "default": "Your total save"
+    },
+    "ateraLabel": {
+      "type": "string",
+      "default": "Atera:"
+    },
+    "providerLabel": {
+      "type": "string",
+      "default": "Current Provider:"
+    },
+    "noteText": {
+      "type": "string",
+      "default": "*Prices are illustrative only"
+    },
+    "slidersMainTitle": {
+      "type": "string",
+      "default": "sliders Main Title"
+    },
+    
+    "sliderTitles": {
+      "type": "array",
+      "default": [
+        "How many technicians are in your company?",
+        "How many endpoints do you manage?",
+        "How much are you charged per endpoint per month?"
+      ]
+    }
+
+  },
+  "supports": {
+    "html": false
+  }
+}

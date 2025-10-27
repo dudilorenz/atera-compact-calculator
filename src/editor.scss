@@ -1,0 +1,7 @@
+@import './style.scss'; // reuse frontend styles in editor
+
+// Editor-only adjustments
+.atera-calc-wrapper {
+	border: 1px dashed #ccc;
+	padding: 1rem;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "atera-compact-calculator",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build && copy src\\block.json build\\block.json && mkdir build\\temp && wp-scripts build src\\frontend.js --output-path=build\\temp && xcopy build\\temp build /E /Y && rmdir /s /q build\\temp",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.3.0"
+  }
+}
